@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"name": "attack_and_defense",
+			"uri": "vscode-remote://ssh-remote+192.168.255.130/data/attack_and_defense"
+		},
+		{
+			"name": "ssh-remote+192.168.255.130",
+			"uri": "vscode-remote://ssh-remote+192.168.255.130/"
+		}
+	],
+	"remoteAuthority": "ssh-remote+192.168.255.130",
+	"settings": {}
+}

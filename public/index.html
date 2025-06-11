@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <!--  Nyaciao~ (∠・ω< )⌒☆   -->
+    <title>Nyaciao&#126; &lpar;∠・ω&lt; &rpar;⌒☆ </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>功能导航</h2>
+            <ul>
+                <li onclick="showModule('xss')">XSS 注入</li>
+                <li onclick="showModule('sql')">SQL 注入</li>
+                <!--这里是添加新功能的部分，根据以下参考按需自行修改添加，详见README.md帮助文档-->
+                <!--
+                <li onclick="showModule('New01')">NEW01</li>
+                <li onclick="showModule('New02')">NEW02</li>
+                <li onclick="showModule('New03')">NEW03</li>
+                -->
+            </ul>
+        </aside>
+        <main class="content">
+            <!-----------------------xss----------------------------------->
+            <div id="xss-module" class="module">
+                <h2>XSS 注入测试</h2>
+                <label>选择安全级别：</label>
+                <select id="securityLevel">
+                    <option value="low">Low</option>
+                    <option value="high">High</option>
+                </select>
+                <br><br>
+                <input id="input1" placeholder="请输入内容" />
+                <button onclick="xss_func()">提交</button>
+                <div id="displayArea"></div>
+            </div>
+            <!-----------------------sql----------------------------------->
+            <div id="sql-module" class="module" style="display: none;">
+                <h2>SQL 注入测试</h2>
+                <label for="level">安全级别：</label>
+                <select id="level">
+                    <option value="low">低（可注入）</option>
+                    <option value="high">高（防注入）</option>
+                </select><br><br>
+                <input id="input2" placeholder="用户名"/>
+                <input id="input3" placeholder="密码"/>
+                <button onclick="sql_func()">提交</button>
+                <div id="userInfo"></div>
+            </div>
+            <!--这里是添加新功能的部分，根据以下参考按需自行修改添加，详见README.md帮助文档-->
+            <!--
+            !-----------------------AddNew01------------------------------
+            <div id="New01-module" class="module" style="display: none;">
+                <h2>新增一功能页（例如文件上传漏洞测试，提交文件）</h2>
+                <div id="AddNew01Result"></div>
+            </div>
+            !-----------------------AddNew02------------------------------
+            <div id="New02-module" class="module" style="display: none;">
+                <h2>新增二功能页（例如目录遍历漏洞测试，图片url）</h2>
+                <div id="AddNew02Result"></div>
+            </div>
+            !-----------------------AddNew03------------------------------
+            <div id="New03-module" class="module" style="display: none;">
+                <h2>新增三功能页（例如代码注入漏洞测试，搜索框）</h2>
+                <div id="AddNew03Result"></div>
+            </div>
+            -->
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/xss.js"></script>
+    <script src="js/sql.js"></script>
+    <!--这里是添加新功能的部分，根据以下参考按需自行修改添加，详见README.md帮助文档-->
+    <!--
+    <script src="js/AddNew01.js"></script>
+    <script src="js/AddNew02.js"></script>
+    <script src="js/AddNew03.js"></script>
+    -->
+
+</body>
+</html>
