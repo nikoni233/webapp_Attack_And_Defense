@@ -472,9 +472,21 @@ systemctl restart mysqld nginx
 node server.js
 ```
 
+![image-20250611235404546](../assets/README/image-20250611235404546.png)
 
 
-![image-20250611235404546](/MD_assets/image-20250611235404546.png)
+
+#### 5.疑难杂症
+
+##### 【问题】前端(80)访问显示错误访问，后端(3002)正常开启。
+
+解决方案：
+
+1、"/etc/selinux/config"中，"SELINUX="部分对应值改成"disabled"。
+
+2、web项目目录给予NGINX权限"755"。
+
+3、防火墙"firewalld"关闭或者放行端口。
 
 ### 二、攻击测试与防御
 
